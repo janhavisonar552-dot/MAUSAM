@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- IMPORTANT FOR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MAUSAM - Personalized Weather</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+<aside class="sidebar">
+
+    <div class="logo">
+        <div class="logo-icon">🌤️</div>
+        <div>
+            <h1>MAUSAM</h1>
+            <p>Weather for a better tomorrow</p>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html" class="active">🏠 <span>Home</span></a>
+        <a href="profile.html">👤 <span>My Profile</span></a>
+        <a href="forecast.html">🌿 <span>Forecast</span></a>
+        <a href="alerts.html">🔔 <span>Alerts</span><b>3</b></a>
+        <a href="features.html">✨ <span>Smart Features</span></a>
+        <a href="about.html">ℹ️ <span>About</span></a>
+        <a href="map.html" class="active">🗺️<span>Map</span></a>
+        <a href="setting.html" class="active">⚙️<span>Setting</span></a>
+    </nav>
+
+    <div class="side-text">
+        <h3>Same Weather.</h3>
+        <h3>Different Needs.</h3>
+        <p>
+            MAUSAM provides personalized weather information
+            for every user.
+        </p>
+    </div>
+
+</aside>
+
+
+<!-- ================= MAIN ================= -->
+<main class="main">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+
+        <div class="mobile-logo">
+            🌤️ <strong>MAUSAM</strong>
+        </div>
+
+        <div class="search">
+            🔍
+            <input type="text" placeholder="Search for your city...">
+        </div>
+
+        <div class="top-info">
+            <span>📍 Pune</span>
+            <span>Tue, 10 Jun 2025</span>
+            <span>10:24 AM</span>
+            <span>🔔</span>
+            <span class="user">J</span>
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+
+            <small>PERSONALIZED WEATHER INTELLIGENCE</small>
+
+            <h2>Good Morning, Janhavi! 👋</h2>
+
+            <p>
+                Here's your personalized weather update for Pune.
+            </p>
+
+            <div class="location">
+                📍 Pune, Maharashtra
+            </div>
+
+        </div>
+
+
+        <!-- CURRENT WEATHER -->
+        <div class="weather-card">
+
+            <div class="weather-main">
+
+                <div class="weather-icon">🌤️</div>
+
+                <div>
+                    <div class="temperature">28°C</div>
+                    <h3>Partly Cloudy</h3>
+                    <p>Feels like 31°C</p>
+                </div>
+
+            </div>
+
+
+            <div class="weather-stats">
+
+                <div>
+                    💧
+                    <strong>72%</strong>
+                    <small>Humidity</small>
+                </div>
+
+                <div>
+                    💨
+                    <strong>12 km/h</strong>
+                    <small>Wind</small>
+                </div>
+
+                <div>
+                    ◉
+                    <strong>1005 hPa</strong>
+                    <small>Pressure</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUOTE -->
+        <div class="quote-card">
+
+            <div class="quote-image">🌄</div>
+
+            <p>
+                <i>
+                    Good weather<br>
+                    grows good moods<br>
+                    and better plans.
+                </i>
+            </p>
+
+            <span>♡</span>
+
+        </div>
+
+
+        <!-- ALERT -->
+        <div id="alerts" class="alert-card">
+
+            <h3>⚠️ Weather Alert</h3>
+
+            <small>Today, 2:00 PM</small>
+
+            <p>
+                Heavy rainfall expected in Pune
+                and nearby areas.
+            </p>
+
+            <button>View Details →</button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROFILES ================= -->
+    <section id="profiles" class="section">
+
+        <div class="section-title">
+            <small>PERSONALIZED EXPERIENCE</small>
+
+            <h2>🌸 Choose Your Profile</h2>
+
+            <p>
+                Get weather information that matters to you.
+            </p>
+        </div>
+
+
+        <!-- HORIZONTAL SCROLL ON MOBILE -->
+        <div class="profile-container">
+
+            <div class="profile-card farmer">
+
+                <div class="profile-image farmer-img">
+                    <img src="https://media.istockphoto.com/id/806276128/photo/farmer-ploughing-rice-field-at-sunrise.jpg?s=612x612&w=0&k=20&c=t5IUOH9GWrI1lAz4gXPJnwjR9WUxQxdmSnIJxk_XDiQ=" alt="Farmer">
+                </div>
+
+                <div class="profile-content">
+
+                    <span>🌱</span>
+
+                    <h3>Farmer</h3>
+
+                    <p>
+                        Rainfall, soil moisture,
+                        crop conditions
+                    </p>
+
+                    <a href="#features">Explore →</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-card traveller">
+
+                <div class="profile-image traveller-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjbpHJu6BkPRgyCzkl8bB0LRATUoI1WvLNDOKlSBZU2CwZqfplH5-oPHYj&s=10" alt="Traveller">
+                </div>
+
+                <div class="profile-content">
+
+                    <span>✈️</span>
+
+                    <h3>Traveller</h3>
+
+                    <p>
+                        Destination weather,
+                        travel conditions
+                    </p>
+
+                    <a href="#features">Explore →</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-card commuter">
+
+                <div class="profile-image commuter-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwayPCsd8IfYPWVuA596GXcAYvXAYwoXkd9XjOgKNUu0nH1wCccPM_axY&s=10" alt="Commuter">
+                </div>
+
+                <div class="profile-content">
+
+                    <span>🚗</span>
+
+                    <h3>Commuter</h3>
+
+                    <p>
+                        Rain forecast, traffic
+                        & road conditions
+                    </p>
+
+                    <a href="#features">Explore →</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-card parent">
+
+                <div class="profile-image parent-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrvdWAnKLF9cP5sQvNQMvkLXtvNiso4F9-ivhqf3A6-mBm992yF-zxbXUP&s=10" alt="Parent">
+                </div>
+
+                <div class="profile-content">
+
+                    <span>👨‍👩‍👧</span>
+
+                    <h3>Parent</h3>
+
+                    <p>
+                        School weather,
+                        safe travel conditions
+                    </p>
+
+                    <a href="#features">Explore →</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MORE PROFILES -->
+<details class="more-profiles">
+
+    <summary class="more-profiles-btn">
+        + More Profiles
+    </summary>
+
+    <div class="more-profile-container">
+
+        <!-- Outdoor User -->
+        <div class="profile-card">
+            <div class="profile-image">
+                <img src="https://plus.unsplash.com/premium_photo-1680223046975-efd6aa36b13b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlJTIwb3V0ZG9vcnxlbnwwfHwwfHx8MA%3D%3D" alt="Outdoor User">
+            </div>
+
+            <div class="profile-content">
+                <span>🥾</span>
+                <h3>Outdoor User</h3>
+
+                <p>
+                    Weather for hiking, camping,
+                    cycling and outdoor activities.
+                </p>
+
+                <a href="#">Explore →</a>
+            </div>
+        </div>
+
+
+        <!-- Health Conscious -->
+        <div class="profile-card">
+            <div class="profile-image">
+                <img src="https://plus.unsplash.com/premium_photo-1769789060524-62f83469c231?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Health Conscious User">
+            </div>
+
+            <div class="profile-content">
+                <span>❤️</span>
+                <h3>Health Conscious</h3>
+
+                <p>
+                    Air quality, UV index,
+                    heat and health-related conditions.
+                </p>
+
+                <a href="#">Explore →</a>
+            </div>
+        </div>
+
+
+        <!-- Beachgoer -->
+        <div class="profile-card">
+            <div class="profile-image">
+                <img src="https://images.unsplash.com/photo-1533443144047-ea8a81e83e68?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Beachgoer">
+            </div>
+
+            <div class="profile-content">
+                <span>🏖️</span>
+                <h3>Beachgoer</h3>
+
+                <p>
+                    Beach weather, UV level,
+                    wind and sea conditions.
+                </p>
+
+                <a href="#">Explore →</a>
+            </div>
+        </div>
+    </div>
+
+    <button type="button"
+            class="back-profiles-btn"
+            onclick="this.closest('details').removeAttribute('open')">
+        ← Back to Profiles
+    </button>
+
+</details>
+
+        
+        
+        </div>
+
+    </div>
+
+</details>
+    </section>
+
+
+    <!-- ================= TODAY FORECAST ================= -->
+    <section id="forecast" class="section">
+
+        <div class="section-title row-title">
+
+            <div>
+                <small>TODAY</small>
+                <h2>📅 Today's Forecast</h2>
+            </div>
+
+            <a href="#">View Full Forecast →</a>
+
+        </div>
+
+
+        <!-- HORIZONTAL SCROLL -->
+        <div class="forecast-scroll">
+
+            <div class="forecast-box">
+                <b>Now</b>
+                <span>🌤️</span>
+                <strong>28°</strong>
+            </div>
+
+            <div class="forecast-box">
+                <b>12 PM</b>
+                <span>☀️</span>
+                <strong>30°</strong>
+            </div>
+
+            <div class="forecast-box">
+                <b>3 PM</b>
+                <span>🌤️</span>
+                <strong>29°</strong>
+            </div>
+
+            <div class="forecast-box">
+                <b>6 PM</b>
+                <span>🌧️</span>
+                <strong>26°</strong>
+            </div>
+
+            <div class="forecast-box">
+                <b>9 PM</b>
+                <span>🌙</span>
+                <strong>24°</strong>
+            </div>
+
+            <div class="forecast-box">
+                <b>12 AM</b>
+                <span>🌙</span>
+                <strong>23°</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= 7 DAY ================= -->
+    <section class="section">
+
+        <div class="section-title">
+
+            <small>WEEKLY</small>
+
+            <h2>📅 7 Day Forecast</h2>
+
+        </div>
+
+
+        <div class="days-scroll">
+
+            <div class="day">
+                <b>Tue</b>
+                <small>10 Jun</small>
+                <span>🌤️</span>
+                <strong>28°</strong>
+                <small>22°</small>
+            </div>
+
+            <div class="day">
+                <b>Wed</b>
+                <small>11 Jun</small>
+                <span>☀️</span>
+                <strong>31°</strong>
+                <small>24°</small>
+            </div>
+
+            <div class="day">
+                <b>Thu</b>
+                <small>12 Jun</small>
+                <span>🌧️</span>
+                <strong>30°</strong>
+                <small>25°</small>
+            </div>
+
+            <div class="day">
+                <b>Fri</b>
+                <small>13 Jun</small>
+                <span>🌧️</span>
+                <strong>29°</strong>
+                <small>24°</small>
+            </div>
+
+            <div class="day">
+                <b>Sat</b>
+                <small>14 Jun</small>
+                <span>🌧️</span>
+                <strong>27°</strong>
+                <small>23°</small>
+            </div>
+
+            <div class="day">
+                <b>Sun</b>
+                <small>15 Jun</small>
+                <span>🌤️</span>
+                <strong>28°</strong>
+                <small>22°</small>
+            </div>
+
+            <div class="day">
+                <b>Mon</b>
+                <small>16 Jun</small>
+                <span>☀️</span>
+                <strong>29°</strong>
+                <small>23°</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PERSONALIZED INSIGHTS ================= -->
+    <section class="section">
+
+        <div class="section-title">
+
+            <small>AI PERSONALIZATION</small>
+
+            <h2>💡 My Personalized Insights</h2>
+
+        </div>
+
+
+        <div class="insight-main">
+
+            <div class="big-icon">
+                🚗
+            </div>
+
+            <div>
+
+                <h3>Commuter</h3>
+
+                <h4>Rain expected at 5 PM</h4>
+
+                <p>
+                    Keep an umbrella and allow
+                    extra travel time.
+                </p>
+
+                <a href="#">More Details →</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="mini-scroll">
+
+            <div>
+                🕘
+                <b>Best Time to Travel</b>
+                <small>After 8 PM</small>
+            </div>
+
+            <div>
+                🛣️
+                <b>Road Condition</b>
+                <small>Wet roads</small>
+            </div>
+
+            <div>
+                🚗
+                <b>Traffic</b>
+                <small>Moderate</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ADDITIONAL INFO ================= -->
+    <section class="section">
+
+        <div class="section-title">
+            <small>WEATHER DETAILS</small>
+            <h2>💡 Additional Information</h2>
+        </div>
+
+        <div class="info-scroll">
+
+            <div class="info-box">
+                ☀️
+                <b>UV Index</b>
+                <small>Moderate (5)</small>
+            </div>
+
+            <div class="info-box">
+                🌿
+                <b>AQI</b>
+                <small>52 (Good)</small>
+            </div>
+
+            <div class="info-box">
+                🌅
+                <b>Sunrise</b>
+                <small>5:52 AM</small>
+            </div>
+
+            <div class="info-box">
+                🌇
+                <b>Sunset</b>
+                <small>6:59 PM</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= AIR QUALITY ================= -->
+    <section class="section">
+
+        <div class="section-title">
+
+            <small>ENVIRONMENT</small>
+
+            <h2>🍃 Air Quality</h2>
+
+        </div>
+
+
+        <div class="aqi">
+
+            <div class="aqi-circle">
+
+                <strong>52</strong>
+
+                <small>AQI</small>
+
+            </div>
+
+            <div>
+
+                <h3>Good</h3>
+
+                <p>
+                    Air quality is satisfactory
+                    for most people.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="pollution-scroll">
+
+            <div>
+                <b>PM2.5</b>
+                <small>24 µg/m³</small>
+            </div>
+
+            <div>
+                <b>PM10</b>
+                <small>42 µg/m³</small>
+            </div>
+
+            <div>
+                <b>NO₂</b>
+                <small>18 µg/m³</small>
+            </div>
+
+            <div>
+                <b>SO₂</b>
+                <small>6 µg/m³</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= QUICK LINKS ================= -->
+    <section class="section">
+
+        <div class="section-title">
+
+            <small>SHORTCUTS</small>
+
+            <h2>🔗 Quick Links</h2>
+
+        </div>
+
+
+        <!-- HORIZONTAL SCROLL -->
+        <div class="quick-scroll">
+
+            <a href="#">📍 Weather Map</a>
+            <a href="#">🌧️ Rainfall Radar</a>
+            <a href="#">🛰️ Satellite View</a>
+            <a href="#">📰 Weather News</a>
+            <a href="#">⚙️ Settings</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SMART FEATURES ================= -->
+    <section id="features" class="section">
+
+        <div class="section-title">
+
+            <small>MAUSAM</small>
+
+            <h2>🚀 Smart Features</h2>
+
+            <p>
+                Features from the MAUSAM concept.
+            </p>
+
+        </div>
+
+
+        <div class="features-grid">
+
+            <div class="feature">
+                🤖
+                <h3>AI Personal Weather Assistant</h3>
+                <p>
+                    Personalized weather answers
+                    using natural language.
+                </p>
+            </div>
+
+            <div class="feature">
+                🧠
+                <h3>ML Personalization Engine</h3>
+                <p>
+                    Learns user behavior and
+                    preferences.
+                </p>
+            </div>
+
+            <div class="feature">
+                🔮
+                <h3>Predictive Personalization</h3>
+                <p>
+                    Predicts what information
+                    the user may need.
+                </p>
+            </div>
+
+            <div class="feature">
+                📍
+                <h3>Hyperlocal Weather Intelligence</h3>
+                <p>
+                    Weather information for
+                    exact locations.
+                </p>
+            </div>
+
+            <div class="feature">
+                🛰️
+                <h3>Satellite + Radar + AI</h3>
+                <p>
+                    Combines multiple weather
+                    data sources.
+                </p>
+            </div>
+
+            <div class="feature">
+                🏙️
+                <h3>Digital Weather Twin</h3>
+                <p>
+                    Simulates possible weather
+                    scenarios.
+                </p>
+            </div>
+
+            <div class="feature">
+                ⚠️
+                <h3>AI Risk Prediction Engine</h3>
+                <p>
+                    Predicts weather risk for
+                    different user profiles.
+                </p>
+            </div>
+
+            <div class="feature">
+                🔎
+                <h3>Explainable AI</h3>
+                <p>
+                    Explains why an alert or
+                    recommendation appears.
+                </p>
+            </div>
+
+            <div class="feature">
+                🗺️
+                <h3>Dynamic Weather Map</h3>
+                <p>
+                    Interactive weather and
+                    risk layers.
+                </p>
+            </div>
+
+            <div class="feature">
+                🛣️
+                <h3>Weather-Aware Route Intelligence</h3>
+                <p>
+                    Suggests safer routes using
+                    weather information.
+                </p>
+            </div>
+
+            <div class="feature">
+                🌱
+                <h3>AI Agricultural Advisor</h3>
+                <p>
+                    Weather-aware agricultural
+                    guidance.
+                </p>
+            </div>
+
+            <div class="feature">
+                👥
+                <h3>Dynamic User Persona</h3>
+                <p>
+                    Homepage adapts to the
+                    user's current needs.
+                </p>
+            </div>
+
+            <div class="feature">
+                🏠
+                <h3>Context-Aware Homepage</h3>
+                <p>
+                    Changes using time, location
+                    and activity.
+                </p>
+            </div>
+
+            <div class="feature">
+                🎙️
+                <h3>Voice-Based MAUSAM</h3>
+                <p>
+                    Voice interaction for
+                    weather queries.
+                </p>
+            </div>
+
+            <div class="feature">
+                💬
+                <h3>Conversational Weather Interface</h3>
+                <p>
+                    Chat-based weather assistance.
+                </p>
+            </div>
+
+            <div class="feature">
+                📊
+                <h3>Data Science Dashboard</h3>
+                <p>
+                    Forecast accuracy and
+                    model evaluation.
+                </p>
+            </div>
+
+            <div class="feature">
+                🔄
+                <h3>Continuous Learning</h3>
+                <p>
+                    Improves recommendations
+                    over time.
+                </p>
+            </div>
+
+            <div class="feature">
+                🚨
+                <h3>Intelligent Alert Prioritization</h3>
+                <p>
+                    Prioritizes important alerts.
+                </p>
+            </div>
+
+            <div class="feature">
+                🌍
+                <h3>Climate Intelligence Layer</h3>
+                <p>
+                    Long-term weather and
+                    climate trends.
+                </p>
+            </div>
+
+            <div class="feature">
+                🔐
+                <h3>Privacy-Preserving Personalization</h3>
+                <p>
+                    User control over personal data.
+                </p>
+            </div>
+
+            <div class="feature">
+                🧪
+                <h3>What-If Simulation</h3>
+                <p>
+                    Explore possible effects of
+                    weather scenarios.
+                </p>
+            </div>
+
+            <div class="feature">
+                🧩
+                <h3>Plugin / Modular Architecture</h3>
+                <p>
+                    Easily add future services.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STAY PREPARED ================= -->
+    <section class="stay">
+
+        <div>
+            <small>WEATHER SAFETY</small>
+
+            <h2>☂ Stay Prepared</h2>
+
+            <p>
+                Turn weather forecasts into
+                timely and useful decisions.
+            </p>
+        </div>
+
+        <div class="stay-icon">
+            🌄 ☂️
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section about">
+
+        <small>PROJECT VISION</small>
+
+        <h2>MAUSAM </h2>
+
+        <h3>Personalized. Predictive. Proactive.</h3>
+
+        <p>
+            Same weather. Different needs.
+            MAUSAM provides the right weather
+            information to the right person at
+            the right time.
+        </p>
+
+    </section>
+
+
+    <footer>
+        MAUSAM  • Personalized Weather Intelligence
+    </footer>
+
+</main>
+
+</body>
+</html>

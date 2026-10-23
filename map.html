@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Map - MAUSAM</title>
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- Your existing CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Map page CSS only -->
+    <style>
+        .map-page {
+            padding: 30px;
+        }
+
+        .map-card {
+            background: white;
+            padding: 25px;
+            border-radius: 22px;
+            box-shadow: 0 8px 25px rgba(20, 80, 120, 0.08);
+        }
+
+        .map-card h1 {
+            margin: 8px 0;
+            color: #08345d;
+        }
+
+        .map-card p {
+            color: #62788b;
+        }
+
+        #worldMap {
+            width: 100%;
+            height: 500px;
+            margin-top: 20px;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .map-layers {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .map-layer {
+            padding: 15px;
+            background: #f3f9fd;
+            border: 1px solid #d8e7f2;
+            border-radius: 14px;
+        }
+
+        .map-layer strong,
+        .map-layer small {
+            display: block;
+            margin-top: 6px;
+        }
+
+        .map-layer small {
+            color: #62788b;
+        }
+
+        .back-map {
+            display: inline-block;
+            margin-bottom: 15px;
+            padding: 9px 15px;
+            background: #0a4c7c;
+            color: white;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+
+            .map-page {
+                padding: 12px;
+            }
+
+            .map-card {
+                padding: 15px;
+            }
+
+            #worldMap {
+                height: 400px;
+            }
+
+            .map-layers {
+                display: flex;
+                overflow-x: auto;
+                gap: 10px;
+                padding-bottom: 8px;
+            }
+
+            .map-layer {
+                min-width: 160px;
+                flex-shrink: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="map-page">
+
+        <a href="index.html" class="back-map">
+            ← Back to Home
+        </a>
+
+        <section class="map-card">
+
+            <small>WEATHER MAP</small>
+
+            <h1>🗺️ Weather Map</h1>
+
+            <p>
+                Explore weather conditions around your location.
+            </p>
+
+            <h2>📍 Pune, Maharashtra</h2>
+
+            <!-- WORLD MAP -->
+            <div id="worldMap"></div>
+
+            <!-- MAP LAYERS -->
+            <h2>Map Layers</h2>
+
+            <div class="map-layers">
+
+                <div class="map-layer">
+                    🌧️
+                    <strong>Rainfall Radar</strong>
+                    <small>View rainfall activity</small>
+                </div>
+
+                <div class="map-layer">
+                    🌡️
+                    <strong>Temperature</strong>
+                    <small>Temperature patterns</small>
+                </div>
+
+                <div class="map-layer">
+                    💨
+                    <strong>Wind</strong>
+                    <small>Wind direction and speed</small>
+                </div>
+
+                <div class="map-layer">
+                    🌫️
+                    <strong>Air Quality</strong>
+                    <small>Air pollution levels</small>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+
+        // Create world map
+        const map = L.map("worldMap").setView([20, 0], 2);
+
+        // World map tiles
+        L.tileLayer(
+            "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+            {
+                maxZoom: 19,
+                attribution: "&copy; OpenStreetMap contributors"
+            }
+        ).addTo(map);
+
+        // Pune marker
+        L.marker([18.5204, 73.8567])
+            .addTo(map)
+            .bindPopup(
+                "<b>Pune, Maharashtra</b><br>28°C<br>🌤️ Partly Cloudy"
+            );
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1739 @@
+/* =========================================
+   MAUSAM 2.0 - RESPONSIVE CSS
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #edf7ff;
+    color: #08345d;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   SIDEBAR
+   ========================================= */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    padding: 25px 15px;
+    background: linear-gradient(180deg, #0a4c7c, #062d4e);
+    color: white;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.logo-icon {
+    font-size: 40px;
+}
+
+.logo h1 {
+    font-size: 27px;
+}
+
+.logo p {
+    font-size: 11px;
+    color: #d9efff;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: rgba(255,255,255,0.18);
+}
+
+.sidebar nav b {
+    margin-left: auto;
+    background: #ff5555;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 11px;
+}
+
+.side-text {
+    margin-top: 80px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.side-text h3 {
+    font-size: 17px;
+}
+
+.side-text p {
+    font-size: 13px;
+    margin-top: 10px;
+    color: #dcefff;
+}
+
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+.main {
+    margin-left: 220px;
+    min-width: 0;
+}
+
+
+/* =========================================
+   TOP BAR
+   ========================================= */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 25px;
+    background: rgba(255,255,255,0.92);
+    border-bottom: 1px solid #d8e7f2;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+}
+
+.mobile-logo {
+    display: none;
+}
+
+.search {
+    width: 380px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 30px;
+    background: #eef6fc;
+}
+
+.search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.top-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 13px;
+}
+
+.user {
+    width: 37px;
+    height: 37px;
+    display: grid;
+    place-items: center;
+    background: #0a426c;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 0.7fr 0.9fr;
+    gap: 15px;
+    padding: 30px;
+    background:
+        linear-gradient(135deg,#2e6f94,#8bb9d2);
+    color: white;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text small {
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.hero-text h2 {
+    font-size: clamp(30px, 4vw, 48px);
+    margin: 10px 0;
+}
+
+.hero-text p {
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.location {
+    width: fit-content;
+    padding: 10px 15px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 30px;
+    background: rgba(255,255,255,.12);
+}
+
+
+/* WEATHER CARD */
+
+.weather-card {
+    padding: 20px;
+    border-radius: 22px;
+    background: rgba(0,68,120,.53);
+    border: 1px solid rgba(255,255,255,.2);
+}
+
+.weather-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.weather-icon {
+    font-size: 55px;
+}
+
+.temperature {
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.weather-card h3 {
+    margin: 4px 0;
+}
+
+.weather-card p {
+    font-size: 13px;
+}
+
+.weather-stats {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 8px;
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,.25);
+}
+
+.weather-stats div {
+    text-align: center;
+}
+
+.weather-stats strong,
+.weather-stats small {
+    display: block;
+}
+
+.weather-stats small {
+    font-size: 10px;
+}
+
+
+/* QUOTE */
+
+.quote-card {
+    padding: 20px;
+    border-radius: 22px;
+    text-align: center;
+    background: rgba(255,255,255,.25);
+    display: grid;
+    place-items: center;
+    min-height: 180px;
+}
+
+.quote-image {
+    font-size: 55px;
+}
+
+.quote-card p {
+    line-height: 1.5;
+}
+
+
+/* ALERT */
+
+.alert-card {
+    padding: 22px;
+    border-radius: 22px;
+    background: #fff4f1;
+    color: #6c2525;
+}
+
+.alert-card h3 {
+    color: #df3434;
+    margin-bottom: 8px;
+}
+
+.alert-card small {
+    color: #866b6b;
+}
+
+.alert-card p {
+    margin: 18px 0;
+    line-height: 1.6;
+}
+
+.alert-card button {
+    border: 1px solid #f17070;
+    padding: 10px 15px;
+    border-radius: 25px;
+    background: transparent;
+    color: #d95050;
+}
+
+
+/* =========================================
+   SECTION
+   ========================================= */
+
+.section {
+    margin: 16px 20px;
+    padding: 20px;
+    border-radius: 22px;
+    background: white;
+    border: 1px solid #d8e7f2;
+    box-shadow: 0 8px 25px rgba(20,80,120,.08);
+}
+
+.section-title {
+    margin-bottom: 18px;
+}
+
+.section-title small {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+    color: #66839d;
+}
+
+.section-title h2 {
+    margin: 5px 0;
+    font-size: 21px;
+}
+
+.section-title p {
+    color: #658096;
+}
+
+.row-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-title a {
+    color: #187bc5;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   PROFILE CARDS
+   ========================================= */
+
+.profile-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 14px;
+}
+
+.profile-card {
+    border-radius: 17px;
+    overflow: hidden;
+    border: 1px solid #ccdfed;
+    min-width: 0;
+    background: white;
+}
+
+.profile-image {
+    height: 150px;
+    display: grid;
+    place-items: center;
+    font-size: 65px;
+    background: linear-gradient(135deg,#75c7ef,#ddf3ff);
+}
+
+/* different backgrounds */
+
+.farmer-img {
+    background: linear-gradient(135deg,#79b85a,#eaf8c9);
+}
+
+.traveller-img {
+    background: linear-gradient(135deg,#62a9dd,#dff3ff);
+}
+
+.commuter-img {
+    background: linear-gradient(135deg,#8b78e6,#eee8ff);
+}
+
+.parent-img {
+    background: linear-gradient(135deg,#f0ac72,#fff0df);
+}
+
+.profile-content {
+    padding: 16px;
+    position: relative;
+}
+
+.profile-content > span {
+    position: absolute;
+    top: -22px;
+    left: 15px;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 4px solid white;
+    border-radius: 50%;
+    background: white;
+}
+
+.profile-content h3 {
+    margin: 12px 0 5px;
+}
+
+.profile-content p {
+    color: #61788c;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.profile-content a {
+    color: #167bc7;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   FORECAST
+   ========================================= */
+
+.forecast-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+}
+
+.forecast-box {
+    min-width: 105px;
+    padding: 18px 12px;
+    text-align: center;
+    border: 1px solid #d8e7f2;
+    border-radius: 15px;
+    background: #f8fcff;
+}
+
+.forecast-box b {
+    display: block;
+}
+
+.forecast-box span {
+    display: block;
+    font-size: 34px;
+    margin: 12px 0;
+}
+
+.forecast-box strong {
+    font-size: 22px;
+}
+
+
+/* 7 DAYS */
+
+.days-scroll {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+}
+
+.day {
+    min-width: 85px;
+    padding: 8px;
+    text-align: center;
+    border-right: 1px solid #d9e7f2;
+}
+
+.day b,
+.day small,
+.day span,
+.day strong {
+    display: block;
+}
+
+.day small {
+    color: #688197;
+    margin: 5px 0;
+    font-size: 11px;
+}
+
+.day span {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.day strong {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   INSIGHTS
+   ========================================= */
+
+.insight-main {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+    padding: 20px;
+    background: #eef0ff;
+    border-radius: 17px;
+}
+
+.big-icon {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    background: #d8ddff;
+    border-radius: 15px;
+    font-size: 27px;
+}
+
+.insight-main h3 {
+    margin-bottom: 5px;
+}
+
+.insight-main h4 {
+    margin-bottom: 8px;
+}
+
+.insight-main p {
+    color: #62778a;
+    margin-bottom: 10px;
+}
+
+.insight-main a {
+    color: #167bc7;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.mini-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin-top: 12px;
+    padding-bottom: 5px;
+}
+
+.mini-scroll div {
+    min-width: 170px;
+    padding: 14px;
+    background: #f2f0ff;
+    border-radius: 14px;
+}
+
+.mini-scroll b,
+.mini-scroll small {
+    display: block;
+}
+
+.mini-scroll b {
+    margin: 6px 0;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   ADDITIONAL INFORMATION
+   ========================================= */
+
+.info-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 7px;
+}
+
+.info-box {
+    min-width: 170px;
+    padding: 15px;
+    background: #f2f8fc;
+    border-radius: 13px;
+}
+
+.info-box b,
+.info-box small {
+    display: block;
+    margin-top: 6px;
+}
+
+
+/* =========================================
+   AIR QUALITY
+   ========================================= */
+
+.aqi {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.aqi-circle {
+    width: 120px;
+    height: 120px;
+    flex: 0 0 120px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    border-radius: 50%;
+    border: 12px solid #6db643;
+}
+
+.aqi-circle strong {
+    font-size: 28px;
+}
+
+.aqi-circle small {
+    color: #668197;
+}
+
+.aqi p {
+    color: #62788b;
+    line-height: 1.5;
+}
+
+.pollution-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.pollution-scroll div {
+    min-width: 120px;
+    padding: 12px;
+    border-top: 1px solid #dce8f0;
+}
+
+.pollution-scroll b,
+.pollution-scroll small {
+    display: block;
+}
+
+
+/* =========================================
+   QUICK LINKS
+   ========================================= */
+
+.quick-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 7px;
+}
+
+.quick-scroll a {
+    flex: 0 0 160px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #d6e6f1;
+    border-radius: 14px;
+    background: #f7fbff;
+}
+
+
+/* =========================================
+   SMART FEATURES
+   ========================================= */
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 12px;
+}
+
+.feature {
+    min-height: 150px;
+    padding: 16px;
+    border-radius: 15px;
+    border: 1px solid #d6e6f1;
+    background: linear-gradient(180deg,#fff,#f5faff);
+}
+
+.feature h3 {
+    font-size: 15px;
+    margin: 10px 0 6px;
+}
+
+.feature p {
+    color: #668095;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   STAY PREPARED
+   ========================================= */
+
+.stay {
+    margin: 16px 20px;
+    padding: 30px;
+    min-height: 180px;
+    border-radius: 22px;
+    background: linear-gradient(135deg,#5a91af,#dff3ff);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stay h2 {
+    margin: 8px 0;
+    font-size: 28px;
+}
+
+.stay p {
+    max-width: 450px;
+}
+
+.stay-icon {
+    font-size: 80px;
+}
+
+
+/* =========================================
+   ABOUT
+   ========================================= */
+
+.about {
+    line-height: 1.7;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin: 6px 0;
+}
+
+.about h3 {
+    margin-bottom: 10px;
+}
+
+.about p {
+    color: #60788d;
+    max-width: 700px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 12px;
+    color: #668095;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .main {
+        margin-left: 190px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .profile-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* SIDEBAR BECOMES TOP NAV */
+
+    .sidebar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: auto;
+        padding: 8px;
+        overflow: hidden;
+    }
+
+    .logo,
+    .side-text {
+        display: none;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 6px;
+        padding-bottom: 2px;
+    }
+
+    .sidebar nav a {
+        flex: 0 0 auto;
+        padding: 10px 12px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+
+    /* MAIN */
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+
+    /* TOP BAR */
+
+    .topbar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .mobile-logo {
+        display: block;
+        font-size: 18px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .top-info {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: 11px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 18px 10px;
+    }
+
+    .hero-text h2 {
+        font-size: 30px;
+    }
+
+    .weather-card {
+        width: 100%;
+    }
+
+    .temperature {
+        font-size: 39px;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        margin: 12px 7px;
+        padding: 15px;
+    }
+
+
+    /* PROFILE CARDS
+       SWIPE LEFT/RIGHT ONLY HERE */
+
+    .profile-container {
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        padding-bottom: 10px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .profile-card {
+        flex: 0 0 88%;
+        min-width: 88%;
+        scroll-snap-align: start;
+    }
+
+    .profile-image {
+        height: 170px;
+    }
+
+
+    /* FORECAST ROWS */
+
+    .forecast-scroll,
+    .days-scroll,
+    .mini-scroll,
+    .info-scroll,
+    .pollution-scroll,
+    .quick-scroll {
+        max-width: 100%;
+    }
+
+
+    /* FEATURES */
+
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    /* STAY */
+
+    .stay {
+        margin: 12px 7px;
+        padding: 22px;
+    }
+
+    .stay-icon {
+        font-size: 55px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONE
+   ========================================= */
+
+@media (max-width: 430px) {
+
+    .hero-text h2 {
+        font-size: 26px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        flex-basis: 92%;
+        min-width: 92%;
+    }
+
+    .weather-stats {
+        gap: 3px;
+    }
+
+    .weather-stats strong {
+        font-size: 12px;
+    }
+
+    .weather-stats small {
+        font-size: 9px;
+    }
+
+    .stay {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .profile-card {
+        flex: 0 0 90% !important;
+        min-width: 90% !important;
+    }
+
+    .profile-image {
+        height: 200px !important;
+        overflow: hidden !important;
+    }
+
+    .profile-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+
+    .profile-content {
+        position: relative !important;
+        background: white !important;
+        padding: 15px !important;
+        color: #08345d !important;
+    }
+}
+
+/* ===== PROFILE IMAGE FIX ===== */
+
+.profile-card {
+    overflow: hidden !important;
+    border-radius: 18px !important;
+}
+
+.profile-image {
+    width: 100% !important;
+    height: 190px !important;
+    overflow: hidden !important;
+}
+
+.profile-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+}
+
+/* Text BELOW image */
+.profile-content {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    background: #ffffff !important;
+    color: #08345d !important;
+    padding: 16px !important;
+}
+
+/* ===== PHONE ===== */
+@media (max-width: 768px) {
+
+    .profile-card {
+        flex: 0 0 88% !important;
+        min-width: 88% !important;
+    }
+
+    .profile-image {
+        width: 100% !important;
+        height: 165px !important;
+    }
+
+    .profile-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .profile-content {
+        min-height: 125px !important;
+        padding: 15px !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .profile-container {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 10px !important;
+        padding: 0 2px 10px !important;
+    }
+
+    .profile-card {
+        flex: 0 0 94% !important;
+        min-width: 94% !important;
+        max-width: 94% !important;
+    }
+
+    .profile-image {
+        width: 100% !important;
+        height: 350px !important;
+        overflow: hidden !important;
+    }
+
+    .profile-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: centre !important;
+        display: block !important;
+    }
+
+    .profile-content {
+        padding: 14px !important;
+        min-height: 115px !important;
+        background: #fff !important;
+    }
+
+    .profile-content h3 {
+        margin: 8px 0 4px !important;
+        font-size: 19px !important;
+    }
+
+    .profile-content p {
+        margin-bottom: 7px !important;
+        font-size: 13px !important;
+    }
+}
+
+/* ===============================
+   NEW SEPARATE PAGES
+   =============================== */
+
+.page {
+    min-height: 100vh;
+    padding: 40px;
+    background: #edf7ff;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    background: #0a4c7c;
+    color: white;
+    font-weight: bold;
+}
+
+.page-card {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 22px;
+    border: 1px solid #d6e6f1;
+    box-shadow: 0 10px 30px rgba(20,80,120,.08);
+}
+
+.page-card h1 {
+    margin: 8px 0 15px;
+    color: #08345d;
+    font-size: 35px;
+}
+
+.page-card h2 {
+    margin: 25px 0 10px;
+}
+
+.page-card p {
+    color: #62788b;
+    line-height: 1.7;
+}
+
+.profile-detail {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    background: #f1f8fd;
+    border-radius: 18px;
+}
+
+.big-profile {
+    width: 80px;
+    height: 80px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #0a4c7c;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.option-grid,
+.info-grid,
+.feature-page-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+
+.option,
+.info-grid div,
+.feature-page-grid div {
+    padding: 18px;
+    border-radius: 15px;
+    background: #f3f9fd;
+    border: 1px solid #dceaf3;
+}
+
+.option {
+    font-weight: bold;
+}
+
+.forecast-large {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    margin: 20px 0;
+    padding-bottom: 10px;
+}
+
+.forecast-large div {
+    min-width: 110px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    background: #f3f9fd;
+    border: 1px solid #dceaf3;
+    line-height: 2;
+}
+
+.alert-page-card {
+    margin-top: 15px;
+    padding: 20px;
+    border-left: 5px solid #ef5959;
+    border-radius: 15px;
+    background: #fff3f0;
+}
+
+.alert-page-card h2 {
+    margin-top: 0;
+    color: #b72f2f;
+}
+
+.feature-page-grid h3 {
+    margin: 10px 0 5px;
+}
+
+.feature-page-grid p {
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+
+    .page {
+        padding: 15px;
+    }
+
+    .page-card {
+        padding: 20px;
+    }
+
+    .page-card h1 {
+        font-size: 28px;
+    }
+
+    .option-grid,
+    .info-grid,
+    .feature-page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-detail {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* =================================
+   MAP PAGE
+   ================================= */
+
+.map-box {
+    margin-top: 25px;
+}
+
+.map-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.map-top h2 {
+    margin: 0;
+}
+
+.map-top select,
+.setting-select {
+    padding: 10px 14px;
+    border: 1px solid #d5e5f0;
+    border-radius: 10px;
+    background: white;
+    color: #08345d;
+}
+
+.map-area {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid #c8dfed;
+
+    background:
+        linear-gradient(135deg,
+            #d8efff,
+            #bde0d2 45%,
+            #f1e5bd);
+}
+
+/* roads */
+
+.road {
+    position: absolute;
+    height: 7px;
+    background: #ffffff;
+    opacity: .9;
+    border-radius: 10px;
+}
+
+.road1 {
+    width: 110%;
+    left: -20px;
+    top: 45%;
+    transform: rotate(15deg);
+}
+
+.road2 {
+    width: 100%;
+    left: 0;
+    top: 65%;
+    transform: rotate(-20deg);
+}
+
+.road3 {
+    width: 90%;
+    left: 5%;
+    top: 25%;
+    transform: rotate(-5deg);
+}
+
+.map-pin {
+    position: absolute;
+    font-size: 30px;
+    z-index: 3;
+}
+
+.pin1 {
+    left: 48%;
+    top: 45%;
+}
+
+.pin2 {
+    left: 25%;
+    top: 30%;
+}
+
+.pin3 {
+    right: 20%;
+    bottom: 25%;
+}
+
+.map-label {
+    position: absolute;
+    top: 52%;
+    left: 53%;
+    padding: 12px 15px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.12);
+    line-height: 1.5;
+    z-index: 4;
+}
+
+.map-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.map-options div {
+    padding: 17px;
+    background: #f3f9fd;
+    border: 1px solid #d9e8f2;
+    border-radius: 14px;
+}
+
+.map-options strong,
+.map-options small {
+    display: block;
+    margin-top: 7px;
+}
+
+.map-options small {
+    color: #668096;
+}
+
+
+/* =================================
+   SETTINGS PAGE
+   ================================= */
+
+.settings-list {
+    margin-top: 25px;
+}
+
+.setting-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid #dce8f1;
+}
+
+.setting-row h3 {
+    margin-bottom: 5px;
+}
+
+.setting-row p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.toggle {
+    min-width: 65px;
+    padding: 9px 14px;
+    border: none;
+    border-radius: 20px;
+    background: #d9e4eb;
+    color: #536a7b;
+    font-weight: bold;
+}
+
+.toggle.active {
+    background: #1984d0;
+    color: white;
+}
+
+.small-btn {
+    padding: 9px 15px;
+    background: #0a4c7c;
+    color: white;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* =================================
+   MOBILE
+   ================================= */
+
+@media (max-width: 768px) {
+
+    .page {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .page-card {
+        width: 100%;
+        padding: 17px;
+    }
+
+    .map-top {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .map-top select {
+        width: 100%;
+    }
+
+    .map-area {
+        height: 330px;
+    }
+
+    .map-options {
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding-bottom: 8px;
+    }
+
+    .map-options div {
+        min-width: 160px;
+        flex-shrink: 0;
+    }
+
+    .setting-row {
+        align-items: flex-start;
+    }
+
+    .setting-row > div {
+        flex: 1;
+    }
+
+    .setting-row p {
+        font-size: 12px;
+    }
+
+    .setting-select {
+        width: 110px;
+    }
+}
+
+.sidebar nav a[href="settings.html"] {
+    background: transparent !important;
+}
+
+.sidebar nav a[href="settings.html"]:hover {
+    background: transparent !important;
+}
+
+/* Remove background from sidebar buttons */
+.sidebar nav a {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a:focus,
+.sidebar nav a:active,
+.sidebar nav a.active {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+#worldMap {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #cfe2ef;
+}
+
+@media (max-width: 768px) {
+    #worldMap {
+        height: 400px;
+        width: 100%;
+    }
+}
+
+/* =========================
+   MORE PROFILES
+   ========================= */
+
+.more-profiles {
+    margin-top: 20px;
+}
+
+.more-profiles-btn {
+    width: fit-content;
+    margin: 0 auto 18px;
+    padding: 11px 22px;
+    border-radius: 25px;
+    background: #0a4c7c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+}
+
+.more-profiles-btn::-webkit-details-marker {
+    display: none;
+}
+
+.more-profiles-btn:hover {
+    background: #12679f;
+}
+
+.more-profile-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    animation: showProfiles 0.25s ease;
+}
+
+@keyframes showProfiles {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Profile images */
+
+.more-profile-container .profile-image {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+
+.more-profile-container .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .more-profile-container {
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        padding-bottom: 10px;
+    }
+
+    .more-profile-container .profile-card {
+        min-width: 88%;
+        flex: 0 0 88%;
+    }
+
+    .more-profile-container .profile-image {
+        height: 150px;
+    }
+
+    .more-profiles-btn {
+        margin-top: 5px;
+    }
+}
+
+.more-profiles[open] .more-profiles-btn {
+    display: none;
+}
+
+.back-profiles-btn {
+    display: block;
+    margin: 25px auto 5px;
+    padding: 11px 24px;
+    border: none;
+    border-radius: 25px;
+    background: #0a4c7c;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.back-profiles-btn:hover {
+    background: #12679f;
+}
+
+
+
+/* ===== MORE PROFILE IMAGES - LAPTOP + MOBILE ===== */
+
+.more-profile-container .profile-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: #eef6fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.more-profile-container .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .more-profile-container .profile-image {
+        height: 160px;
+    }
+
+    .more-profile-container .profile-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+}
