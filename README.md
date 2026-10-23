@@ -6,10 +6,6 @@ MAUSAM is a responsive weather website designed to provide personalized, useful,
 
 A farmer, traveller, commuter, and parent may all need different weather information. MAUSAM organizes weather information around the user's needs.
 
-## 🚀 Live Demo
-
-https://janhavisonar552-dot.github.io/MAUSAM_/
-
 ## ✨ Main Features
 
 ### 🏠 Personalized Home Page
